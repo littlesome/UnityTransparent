@@ -1,5 +1,7 @@
 # UnityTransparent
 
+![效果图](https://raw.githubusercontent.com/littlesome/UnityTransparent/master/Screenshot.jpg)
+
 ### 实现了Unity与安卓原生界面的融合，基本思路：
 
 1. 使用TextureView代替SurfaceView。关于二者的区别网上比较多，不在这里说明了。
