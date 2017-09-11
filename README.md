@@ -15,7 +15,7 @@
 
 用调试工具抓了一下渲染过程，发现Unity在安卓上额外做了一步操作：把alpha强制改成1后输出... 
 
-后面Unity2017.2可选了（详见https://forum.unity3d.com/threads/big-performance-issue-with-unity5-on-android.338847/）
+后面Unity2017.2可选了，详见 https://forum.unity3d.com/threads/big-performance-issue-with-unity5-on-android.338847/
 
 这里需要改libunity.so的二进制文件来临时绕过
 ```
