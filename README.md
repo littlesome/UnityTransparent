@@ -4,9 +4,7 @@
 
 ### 实现了Unity与安卓原生界面的融合，基本思路：
 
-1. 使用TextureView代替SurfaceView。关于二者的区别网上比较多，不在这里说明了。
-
-这里为了不修改Unity源码，用了一种比较hacky的方式：
+1. 使用TextureView代替SurfaceView。关于二者的区别网上比较多，不在这里说明了。这里为了不修改Unity源码，用了一种比较hacky的方式：
 
 * 查找到SurfaceView，宽高设置为0
 * 通过反射拿到mCallbacks，保存Unity设置的callback，我们自己调用，清空原数组
@@ -51,5 +49,4 @@ uniform sampler2D tex;
 
 ```
 
-3. 改完后终于可以透明了，然而发现颜色有点怪怪的，感觉颜色叠加了
-没仔细研究安卓的混合模式，最简单的修改方法就是Camera的Background设置为#00000000
+3. 改完后终于可以透明了，然而发现颜色有点怪怪的，感觉颜色叠加了。没仔细研究安卓的混合模式，最简单的修改方法就是Camera的Background设置为#00000000
