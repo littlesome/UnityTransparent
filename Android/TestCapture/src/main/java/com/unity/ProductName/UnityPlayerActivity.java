@@ -9,6 +9,7 @@ import android.graphics.Rect;
 import android.graphics.SurfaceTexture;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.SurfaceHolder;
@@ -102,6 +103,9 @@ public class UnityPlayerActivity extends Activity
 
         setContentView(mUnityPlayer);
         mUnityPlayer.requestFocus();
+
+        View myView = LayoutInflater.from(this).inflate(R.layout.my_layout, mUnityPlayer, false);
+        mUnityPlayer.addView(myView, 0);
 
         for (int i = 0; i < mUnityPlayer.getChildCount(); i++)
         {
