@@ -2,7 +2,7 @@
 
 ![效果图](https://raw.githubusercontent.com/littlesome/UnityTransparent/master/Screenshot.jpg)
 
-### 实现了Unity与安卓原生界面的融合，基本思路：
+### 实现了Unity与安卓原生界面的融合（Unity在上层，原生控件在下层），基本思路：
 
 1. 使用TextureView代替SurfaceView。关于二者的区别网上比较多，不在这里说明了。这里为了不修改Unity源码，用了一种比较hacky的方式：
 
@@ -48,5 +48,9 @@ uniform sampler2D tex;
 }
 
 ```
+
+可以使用UltraEdit来修改so文件
+
+![修改方法](https://raw.githubusercontent.com/littlesome/UnityTransparent/master/HowToEdit.jpg)
 
 3. 改完后终于可以透明了，然而发现颜色有点怪怪的，感觉颜色叠加了。没仔细研究安卓的混合模式，最简单的修改方法就是Camera的Background设置为#00000000
